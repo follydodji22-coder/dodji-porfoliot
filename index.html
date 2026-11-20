@@ -296,18 +296,44 @@ document.querySelectorAll(".reveal").forEach(element => {
 
     <button class="lightbox-next" aria-label="Photo suivante">❯</button>
 </div>
-  <script>
+ <script>
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
 const closeButton = document.querySelector(".lightbox-close");
+const nextButton = document.querySelector(".lightbox-next");
+const prevButton = document.querySelector(".lightbox-prev");
 
-document.querySelectorAll(".gallery-photo").forEach(photo => {
+let currentIndex = 0;
+let photos = [];
+
+function updatePhotos() {
+    photos = Array.from(document.querySelectorAll(".gallery-photo"));
+}
+
+function showPhoto(index) {
+    if (photos.length === 0) return;
+
+    currentIndex = (index + photos.length) % photos.length;
+    lightboxImage.src = photos[currentIndex].src;
+    lightbox.style.display = "flex";
+}
+
+updatePhotos();
+
+photos.forEach((photo, index) => {
     photo.style.cursor = "pointer";
 
     photo.addEventListener("click", () => {
-        lightboxImage.src = photo.src;
-        lightbox.style.display = "flex";
+        showPhoto(index);
     });
+});
+
+nextButton.addEventListener("click", () => {
+    showPhoto(currentIndex + 1);
+});
+
+prevButton.addEventListener("click", () => {
+    showPhoto(currentIndex - 1);
 });
 
 closeButton.addEventListener("click", () => {
@@ -317,6 +343,22 @@ closeButton.addEventListener("click", () => {
 lightbox.addEventListener("click", event => {
     if (event.target === lightbox) {
         lightbox.style.display = "none";
+    }
+});
+
+document.addEventListener("keydown", event => {
+    if (lightbox.style.display !== "flex") return;
+
+    if (event.key === "Escape") {
+        lightbox.style.display = "none";
+    }
+
+    if (event.key === "ArrowRight") {
+        showPhoto(currentIndex + 1);
+    }
+
+    if (event.key === "ArrowLeft") {
+        showPhoto(currentIndex - 1);
     }
 });
 </script>
