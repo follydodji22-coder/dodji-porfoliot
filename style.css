@@ -1280,3 +1280,80 @@ footer p {
   transition:none!important;
  }
 }
+/* PHOTO SUR L'ÉCRAN D'ACCUEIL */
+.welcome-photo {
+  display: block;
+  width: 145px;
+  height: 145px;
+  margin: 0 auto 25px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  border: 3px solid var(--green);
+  box-shadow:
+    0 0 15px rgba(0,255,156,.35),
+    0 0 40px rgba(0,255,156,.18);
+  animation: welcomePhotoGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes welcomePhotoGlow {
+  from {
+    box-shadow: 0 0 12px rgba(0,255,156,.25);
+  }
+  to {
+    box-shadow: 0 0 35px rgba(0,255,156,.55);
+  }
+}
+/* OUTILS INFORMATIQUES */
+.tools-area {
+  margin-top: 55px;
+}
+
+.tools-area h3 {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.tools-area h3 span {
+  color: var(--green);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.tool-item {
+  min-height: 110px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(0,255,156,.055);
+  border: 1px solid rgba(0,255,156,.2);
+  border-radius: 13px;
+  transition: .3s;
+}
+
+.tool-item span {
+  font-size: 30px;
+}
+
+.tool-item strong {
+  font-size: 14px;
+  color: var(--white);
+}
+
+.tool-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(0,255,156,.15);
+}
+
+:root[data-theme="light"] .tool-item {
+  background: rgba(0,143,90,.06);
+  border-color: rgba(0,143,90,.2);
+}
