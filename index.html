@@ -2,707 +2,753 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050807">
-<meta name="description" content="Portfolio de FOLLY Dodji Achille.">
-<title>FOLLY Dodji Achille | Portfolio</title>
-<link rel="stylesheet" href="style.css?v=3">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050807">
+  <meta name="description" content="Portfolio de FOLLY Dodji Achille.">
+  <title>FOLLY Dodji Achille | Portfolio</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+<!-- ÉCRAN D'ACCUEIL -->
 <div class="welcome-screen" id="welcome-screen">
   <div class="welcome-content">
+    <p class="welcome-kicker">BIENVENUE DANS MON UNIVERS</p>
 
-  <p class="welcome-kicker">BIENVENUE DANS MON UNIVERS</p>
+    <h1>FOLLY <span>Dodji Achille</span></h1>
 
-  <img
-    src="images/portrait.jpg"
-    alt="Portrait de FOLLY Dodji Achille"
-    class="welcome-photo"
-  >
+    <div class="welcome-line"></div>
 
-  <h1>FOLLY <span>Dodji Achille</span></h1>
+    <p class="welcome-philosophy" id="welcome-philosophy">
+      « Apprendre, créer, progresser. »
+    </p>
 
-  <div class="welcome-line"></div>
+    <p class="welcome-caption" id="welcome-caption">
+      Chaque idée est une occasion de bâtir quelque chose de grand.
+    </p>
 
-  <p class="welcome-philosophy" id="welcome-philosophy">
-    « Apprendre, créer, progresser. »
-  </p>
+    <button class="welcome-enter" id="welcome-enter">
+      Entrer dans mon portfolio <span>→</span>
+    </button>
+  </div>
 
-  <p class="welcome-caption" id="welcome-caption">
-    Chaque idée est une occasion de bâtir quelque chose de grand.
-  </p>
-
-  <button class="welcome-enter" id="welcome-enter">
-    Entrer dans mon portfolio <span>→</span>
-  </button>
-
-</div>>
   <div class="welcome-footer">DODJI PORTFOLIO · 2026</div>
 </div>
 
 <div class="scroll-progress" id="scroll-progress"></div>
 
+<!-- EN-TÊTE -->
 <header>
-<a href="#accueil" class="logo">DODJI<span>.</span></a>
+  <a href="#accueil" class="logo">DODJI<span>.</span></a>
 
-<div class="preferences" aria-label="Préférences du site">
-  <label class="preference-label" for="language-select">Langue</label>
-  <select id="language-select" aria-label="Choisir la langue">
-    <option value="fr">FR</option>
-    <option value="en">EN</option>
-  </select>
-  <label class="preference-label" for="theme-select">Thème</label>
-  <select id="theme-select" aria-label="Choisir le thème">
-    <option value="auto">Auto</option>
-    <option value="dark">Noir</option>
-    <option value="light">Clair</option>
-  </select>
-</div>
+  <div class="preferences">
+    <label class="preference-label" for="language-select">Langue</label>
+    <select id="language-select">
+      <option value="fr">FR</option>
+      <option value="en">EN</option>
+    </select>
 
-<button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <label class="preference-label" for="theme-select">Thème</label>
+    <select id="theme-select">
+      <option value="auto">Auto</option>
+      <option value="dark">Noir</option>
+      <option value="light">Clair</option>
+    </select>
+  </div>
 
-<nav id="main-nav">
-<a href="#accueil">Accueil</a>
-<a href="#apropos">À propos</a>
-<a href="#competences">Compétences</a>
-<a href="#projets">Projets</a>
-<a href="#applications">Applications</a>
-<a href="#galerie">Galerie</a>
-<a href="#contact">Contact</a>
-<a href="#soutien">Me soutenir</a>
-</nav>
+  <button class="menu-toggle" id="menu-toggle"
+    aria-label="Ouvrir le menu"
+    aria-expanded="false">☰</button>
+
+  <nav id="main-nav">
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#applications">Applications</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#contact">Contact</a>
+    <a href="#soutien">Me soutenir</a>
+  </nav>
 </header>
 
 <main>
 
-<section class="hero" id="accueil">
-<div class="glow"></div>
+  <!-- ACCUEIL PRINCIPAL -->
+  <section class="hero" id="accueil">
+    <div class="glow"></div>
 
-<div class="hero-content reveal">
-<p class="tag">BIENVENUE DANS MON UNIVERS NUMÉRIQUE</p>
-<h1>FOLLY Dodji<br><span>Achille.</span></h1>
-<h2>Créateur numérique · Passionné de technologie</h2>
-<p class="description">Je transforme mes idées en expériences numériques. Je crée, j'apprends et j'innove pour donner vie à des projets qui ont du sens.</p>
+    <div class="hero-content reveal">
+      <p class="tag">BIENVENUE DANS MON UNIVERS NUMÉRIQUE</p>
 
-<div class="buttons">
-<a href="#projets" class="btn">Découvrir mes projets ↗</a>
-<a href="#contact" class="btn-outline">Me contacter</a>
-</div>
+      <h1>FOLLY Dodji<br><span>Achille.</span></h1>
 
-<div class="availability"><span class="pulse"></span>Toujours prêt à apprendre et à créer</div>
-</div>
+      <h2>Créateur numérique · Passionné de technologie</h2>
 
-<div class="hero-card reveal">
-<img src="images/portrait.jpg" alt="Portrait de FOLLY Dodji Achille" class="profile-photo">
-<h3>FOLLY DODJI</h3>
-<p>Créateur numérique<br>Passionné de technologie</p>
-<span class="card-line"></span>
-<small>CRÉER • INNOVER • PROGRESSER</small>
-</div>
-</section>
+      <p class="description">
+        Je transforme mes idées en expériences numériques.
+        Je crée, j'apprends et j'innove pour donner vie à des projets
+        qui ont du sens.
+      </p>
 
-<section id="apropos" class="section reveal">
-<p class="tag">QUI SUIS-JE ?</p>
-<h2 class="section-title">À propos de <span>moi</span></h2>
+      <div class="buttons">
+        <a href="#projets" class="btn">Découvrir mes projets ↗</a>
+        <a href="#contact" class="btn-outline">Me contacter</a>
+      </div>
 
-<div class="stats-container">
-<div class="stat-card">
-<h3><span class="counter" data-target="5">0</span>+</h3>
-<p>Projets présentés</p>
-</div>
-<div class="stat-card">
-<h3><span class="counter" data-target="4">0</span></h3>
-<p>Domaines de compétence</p>
-</div>
-</div>
-
-<div class="glass about">
-<p>Je suis FOLLY Dodji Achille, passionné par le numérique, la technologie, le design et le développement informatique.</p>
-<p>Je construis progressivement mes compétences à travers des projets concrets. Mon ambition est de devenir un expert reconnu et de créer des solutions digitales utiles.</p>
-<p class="highlight">Ma philosophie : apprendre, créer, progresser.</p>
-</div>
-</section>
-
-<section id="competences" class="section reveal">
-<p class="tag">CE QUE JE FAIS</p>
-<h2 class="section-title">Mes <span>compétences</span></h2>
-
-<div class="skills">
-<article class="glass skill">
-<span>01</span>
-<h3>Développement</h3>
-<p>Apprentissage de Python, HTML, CSS et création d'applications.</p>
-</article>
-
-<article class="glass skill">
-<span>02</span>
-<h3>Design graphique</h3>
-<p>Création d'affiches, posters et cartes de vœux.</p>
-</article>
-
-<article class="glass skill">
-<span>03</span>
-<h3>Photographie</h3>
-<p>Retouche photo et création de visuels avec Dodji Studio.</p>
-</article>
-
-<article class="glass skill">
-<span>04</span>
-<h3>Services numériques</h3>
-<p>Installation d'applications, de jeux et services documentaires.</p>
-</article>
-</div>
-  <div class="tools-area">
-  <p class="tag">MON ENVIRONNEMENT DE TRAVAIL</p>
-  <h3>Mes outils <span>informatiques</span></h3>
-
-  <div class="tools-grid">
-    <div class="tool-item">
-      <span>💻</span>
-      <strong>VS Code</strong>
+      <div class="availability">
+        <span class="pulse"></span>
+        Toujours prêt à apprendre et à créer
+      </div>
     </div>
 
-    <div class="tool-item">
-      <span>🐍</span>
-      <strong>Python</strong>
+    <div class="hero-card reveal">
+      <img src="images/portrait.jpg"
+        alt="Portrait de FOLLY Dodji Achille"
+        class="profile-photo">
+
+      <h3>FOLLY DODJI</h3>
+      <p>Créateur numérique<br>Passionné de technologie</p>
+      <span class="card-line"></span>
+      <small>CRÉER • INNOVER • PROGRESSER</small>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos" class="section reveal">
+    <p class="tag">QUI SUIS-JE ?</p>
+    <h2 class="section-title">À propos de <span>moi</span></h2>
+
+    <div class="stats-container">
+      <div class="stat-card">
+        <h3><span class="counter" data-target="5">0</span>+</h3>
+        <p>Projets présentés</p>
+      </div>
+
+      <div class="stat-card">
+        <h3><span class="counter" data-target="4">0</span></h3>
+        <p>Domaines de compétence</p>
+      </div>
     </div>
 
-    <div class="tool-item">
-      <span>📱</span>
-      <strong>Acode</strong>
+    <div class="glass about">
+      <p>
+        Je suis FOLLY Dodji Achille, passionné par le numérique,
+        la technologie, le design et le développement informatique.
+      </p>
+
+      <p>
+        Je construis progressivement mes compétences à travers
+        des projets concrets. Mon ambition est de devenir un expert
+        reconnu et de créer des solutions digitales utiles.
+      </p>
+
+      <p class="highlight">
+        Ma philosophie : apprendre, créer, progresser.
+      </p>
     </div>
+  </section>
 
-    <div class="tool-item">
-      <span>🐧</span>
-      <strong>Linux</strong>
+  <!-- COMPÉTENCES -->
+  <section id="competences" class="section reveal">
+    <p class="tag">CE QUE JE FAIS</p>
+    <h2 class="section-title">Mes <span>compétences</span></h2>
+
+    <div class="skills">
+      <article class="glass skill">
+        <span>01</span>
+        <h3>Développement</h3>
+        <p>Apprentissage de Python, HTML, CSS et création d'applications.</p>
+      </article>
+
+      <article class="glass skill">
+        <span>02</span>
+        <h3>Design graphique</h3>
+        <p>Création d'affiches, posters et cartes de vœux.</p>
+      </article>
+
+      <article class="glass skill">
+        <span>03</span>
+        <h3>Photographie</h3>
+        <p>Retouche photo et création de visuels avec Dodji Studio.</p>
+      </article>
+
+      <article class="glass skill">
+        <span>04</span>
+        <h3>Services numériques</h3>
+        <p>Installation d'applications, de jeux et services documentaires.</p>
+      </article>
     </div>
+  </section>
 
-    <div class="tool-item">
-      <span>🍎</span>
-      <strong>macOS</strong>
+  <!-- PROJETS -->
+  <section id="projets" class="section reveal">
+    <p class="tag">MES RÉALISATIONS</p>
+    <h2 class="section-title">Mes <span>projets</span></h2>
+
+    <div class="projects">
+      <article class="glass project">
+        <div class="project-number">01 / APPLICATION</div>
+        <div class="project-icon">📚</div>
+        <h3>Dodji Planning</h3>
+        <p>
+          Une application mobile pour aider les élèves à organiser
+          leurs études, leurs activités et suivre leur progression.
+        </p>
+        <span class="status">Projet réalisé</span>
+      </article>
+
+      <article class="glass project">
+        <div class="project-number">02 / INTELLIGENCE ARTIFICIELLE</div>
+        <div class="project-icon">🤖</div>
+        <h3>DODJI AI</h3>
+        <p>
+          Un projet d'assistant intelligent évolutif, pensé pour
+          communiquer par la voix et le texte.
+        </p>
+        <span class="status progress">En développement</span>
+      </article>
+
+      <article class="glass project">
+        <div class="project-number">03 / TECHNOLOGIE</div>
+        <div class="project-icon">💻</div>
+        <h3>Dodji's Tech</h3>
+        <p>
+          Un espace consacré au partage de connaissances,
+          d'astuces et d'expériences informatiques.
+        </p>
+        <span class="status">Projet personnel</span>
+      </article>
+
+      <article class="glass project">
+        <div class="project-number">04 / PHOTOGRAPHIE</div>
+        <div class="project-icon">📸</div>
+        <h3>Dodji Studio</h3>
+        <p>
+          Un univers de retouche photo et de création
+          de shootings professionnels.
+        </p>
+        <span class="status">Projet créatif</span>
+      </article>
+
+      <article class="glass project">
+        <div class="project-number">05 / SERVICES NUMÉRIQUES</div>
+        <div class="project-icon">🌐</div>
+        <h3>Dodji Digit</h3>
+        <p>
+          Des services numériques et documentaires : CIP, NPI,
+          IFU, actes sécurisés, saisie et impression.
+        </p>
+        <span class="status">Activité de services</span>
+      </article>
     </div>
+  </section>
 
-    <div class="tool-item">
-      <span>⚙️</span>
-      <strong>Autres outils</strong>
+  <!-- APPLICATIONS -->
+  <section id="applications" class="section reveal">
+    <p class="tag">MES OUTILS NUMÉRIQUES</p>
+    <h2 class="section-title">Mes <span>applications</span></h2>
+
+    <p class="section-intro">
+      Découvre les applications que je développe et que je partage.
+    </p>
+
+    <div class="applications-grid">
+      <article class="glass application-card">
+        <div class="application-icon">📚</div>
+        <div class="project-number">APPLICATION ANDROID · VERSION 1.0.0</div>
+        <h3>Dodji Planning</h3>
+        <p>
+          Organise tes études, planifie tes activités et suis
+          ta progression avec Dodji Planning.
+        </p>
+        <a class="btn application-download"
+          href="https://github.com/follydodji22-coder/dodji-porfoliot/releases/download/v1.0.0/app-release.apk"
+          target="_blank" rel="noopener noreferrer">
+          Télécharger l'APK ↓
+        </a>
+      </article>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 
-<section id="projets" class="section reveal">
-<p class="tag">MES RÉALISATIONS</p>
-<h2 class="section-title">Mes <span>projets</span></h2>
+  <!-- GALERIE -->
+  <section id="galerie" class="section reveal">
+    <p class="tag">MON UNIVERS CRÉATIF</p>
+    <h2 class="section-title">Mes créations <span>visuelles</span></h2>
 
-<div class="projects">
-<article class="glass project">
-<div class="project-number">01 / APPLICATION</div>
-<div class="project-icon">📚</div>
-<h3>Dodji Planning</h3>
-<p>Une application mobile pour aider les élèves à organiser leurs études, leurs activités et suivre leur progression.</p>
-<span class="status">Projet réalisé</span>
-</article>
+    <p class="section-intro">
+      Quelques images de mon univers. Clique sur une photo pour l'agrandir.
+    </p>
 
-<article class="glass project">
-<div class="project-number">02 / INTELLIGENCE ARTIFICIELLE</div>
-<div class="project-icon">🤖</div>
-<h3>DODJI AI</h3>
-<p>Un projet d'assistant intelligent évolutif, pensé pour communiquer par la voix et le texte.</p>
-<span class="status progress">En développement</span>
-</article>
+    <div class="gallery">
+      <article class="gallery-card glass">
+        <img src="images/portrait.jpg"
+          alt="Portrait professionnel de Dodji"
+          class="gallery-photo">
+        <h3>Portrait professionnel</h3>
+        <p>FOLLY Dodji Achille</p>
+      </article>
 
-<article class="glass project">
-<div class="project-number">03 / TECHNOLOGIE</div>
-<div class="project-icon">💻</div>
-<h3>Dodji's Tech</h3>
-<p>Un espace consacré au partage de connaissances, d'astuces et d'expériences informatiques.</p>
-<span class="status">Projet personnel</span>
-</article>
+      <article class="gallery-card glass">
+        <img src="images/shooting-traditionnel.jpg"
+          alt="Shooting traditionnel Dodji Studio"
+          class="gallery-photo">
+        <h3>Shooting traditionnel</h3>
+        <p>Photographie professionnelle • Dodji Studio</p>
+      </article>
 
-<article class="glass project">
-<div class="project-number">04 / PHOTOGRAPHIE</div>
-<div class="project-icon">📸</div>
-<h3>Dodji Studio</h3>
-<p>Un univers de retouche photo et de création de shootings professionnels.</p>
-<span class="status">Projet créatif</span>
-</article>
+      <article class="gallery-card glass">
+        <div class="gallery-placeholder">✦</div>
+        <h3>Créativité numérique</h3>
+        <p>De nouvelles créations arrivent bientôt.</p>
+      </article>
+    </div>
+  </section>
 
-<article class="glass project">
-<div class="project-number">05 / SERVICES NUMÉRIQUES</div>
-<div class="project-icon">🌐</div>
-<h3>Dodji Digit</h3>
-<p>Des services numériques et documentaires : CIP, NPI, IFU, actes sécurisés, saisie et impression.</p>
-<span class="status">Activité de services</span>
-</article>
-</div>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
+    <p class="tag">ENTRONS EN CONTACT</p>
+    <h2 class="section-title">
+      Construisons quelque chose <span>ensemble.</span>
+    </h2>
 
-<!-- SECTION APPLICATIONS -->
-<section id="applications" class="section reveal">
-<p class="tag">MES CRÉATIONS NUMÉRIQUES</p>
-<h2 class="section-title">Mes <span>applications</span></h2>
-<p class="section-intro">Découvre et télécharge les applications que je développe. D'autres créations seront ajoutées progressivement.</p>
+    <div class="glass contact-box">
+      <p>
+        Tu as une idée, une proposition ou un projet ?
+        Je serais ravi d'échanger avec toi.
+      </p>
 
-<div class="applications-grid">
+      <div class="contact-links">
+        <a href="https://wa.me/2290142757762"
+          target="_blank" rel="noopener noreferrer" class="contact-item">
+          📱 WhatsApp principal
+          <span>+229 01 42 75 77 62 ↗</span>
+        </a>
 
-<article class="glass application-card">
-<div class="application-icon">📚</div>
-<div class="application-info">
-<span class="status">Disponible</span>
-<h3>Dodji Planning</h3>
-<p>Organise tes études, planifie tes révisions et suis ta progression grâce à Dodji Planning.</p>
+        <a href="https://wa.me/2290129749346"
+          target="_blank" rel="noopener noreferrer" class="contact-item">
+          📱 WhatsApp secondaire
+          <span>+229 01 29 74 93 46 ↗</span>
+        </a>
 
-<div class="application-details">
-<span>Android</span>
-<span>Version 1.0.0</span>
-</div>
+        <a href="mailto:follydodji22@gmail.com" class="contact-item">
+          ✉️ Adresse e-mail
+          <span>follydodji22@gmail.com ↗</span>
+        </a>
 
-<a class="download-button"
-href="https://github.com/follydodji22-coder/dodji-porfoliot/releases/download/v1.0.0/app-release.apk"
-download="Dodji-Planning.apk"
-target="_blank"
-rel="noopener noreferrer">
-<span>⬇</span> Télécharger l'APK
-</a>
-</div>
-</article>
+        <a href="https://www.facebook.com/profile.php?id=61556301586917"
+          target="_blank" rel="noopener noreferrer" class="contact-item">
+          🌐 Facebook
+          <span>Visiter mon profil ↗</span>
+        </a>
 
-<!-- Les futures applications pourront être ajoutées ici -->
+        <div class="contact-item">
+          📍 Localisation
+          <span>Cotonou, Bénin</span>
+        </div>
+      </div>
 
-</div>
-</section>
+      <form id="contact-form">
+        <h3>Envoyez-moi un message</h3>
+        <input type="text" id="visitor-name"
+          placeholder="Votre nom" required>
+        <input type="email" id="visitor-email"
+          placeholder="Votre adresse e-mail" required>
+        <textarea id="visitor-message"
+          placeholder="Votre message..." required></textarea>
+        <button type="submit">Envoyer sur WhatsApp</button>
+        <p class="form-note">
+          Votre message sera préparé dans WhatsApp.
+          Vous pourrez le vérifier avant de l'envoyer.
+        </p>
+      </form>
+    </div>
+  </section>
 
-<section id="galerie" class="section reveal">
-<p class="tag">MON UNIVERS CRÉATIF</p>
-<h2 class="section-title">Mes créations <span>visuelles</span></h2>
-<p class="section-intro">Quelques images de mon univers. Clique sur une photo pour l'agrandir.</p>
+  <!-- SOUTIEN -->
+  <section id="soutien" class="section reveal">
+    <p class="tag">UN GESTE POUR M'AIDER À GRANDIR</p>
+    <h2 class="section-title">Me <span>soutenir</span></h2>
 
-<div class="gallery">
-<article class="gallery-card glass">
-<img src="images/portrait.jpg" alt="Portrait professionnel de Dodji" class="gallery-photo">
-<h3>Portrait professionnel</h3>
-<p>FOLLY Dodji Achille</p>
-</article>
+    <div class="glass support-box">
+      <p class="support-intro">
+        Si mon travail t'inspire ou si tu souhaites m'encourager
+        dans mes projets, tu peux me soutenir avec l'un des moyens
+        ci-dessous. Merci pour ta générosité !
+      </p>
 
-<article class="gallery-card glass">
-<img src="images/shooting-traditionnel.jpg" alt="Shooting traditionnel Dodji Studio" class="gallery-photo">
-<h3>Shooting traditionnel</h3>
-<p>Photographie professionnelle • Dodji Studio</p>
-</article>
+      <div class="support-methods">
+        <div class="support-method">
+          <strong>MTN Mobile Money</strong>
+          <span>+229 01 42 75 77 62</span>
+          <small>Numéro de réception</small>
+          <button class="copy-number" type="button"
+            data-number="+2290142757762">Copier le numéro</button>
+        </div>
 
-<article class="gallery-card glass">
-<div class="gallery-placeholder">✦</div>
-<h3>Créativité numérique</h3>
-<p>De nouvelles créations arrivent bientôt.</p>
-</article>
-</div>
-</section>
+        <div class="support-method celtis">
+          <strong>Celtis Cash</strong>
+          <span>+229 01 29 74 93 46</span>
+          <small>Numéro de réception</small>
+          <button class="copy-number" type="button"
+            data-number="+2290129749346">Copier le numéro</button>
+        </div>
 
-<section id="contact" class="section reveal">
-<p class="tag">ENTRONS EN CONTACT</p>
-<h2 class="section-title">Construisons quelque chose <span>ensemble.</span></h2>
+        <div class="support-method unavailable">
+          <strong>Moov Money</strong>
+          <span>Indisponible pour le moment</span>
+          <small>Ce moyen de soutien sera ajouté prochainement.</small>
+        </div>
+      </div>
 
-<div class="glass contact-box">
-<p>Tu as une idée, une proposition ou un projet ? Je serais ravi d'échanger avec toi.</p>
+      <p class="support-note">
+        Avant d'effectuer un transfert, vérifie bien le nom
+        du bénéficiaire affiché par ton opérateur.
+      </p>
 
-<div class="contact-links">
-<a href="https://wa.me/2290142757762" target="_blank" rel="noopener noreferrer" class="contact-item">
-📱 WhatsApp principal<span>+229 01 42 75 77 62 ↗</span>
-</a>
-<a href="https://wa.me/2290129749346" target="_blank" rel="noopener noreferrer" class="contact-item">
-📱 WhatsApp secondaire<span>+229 01 29 74 93 46 ↗</span>
-</a>
-<a href="mailto:follydodji22@gmail.com" class="contact-item">
-✉️ Adresse e-mail<span>follydodji22@gmail.com ↗</span>
-</a>
-<a href="https://www.facebook.com/profile.php?id=61556301586917" target="_blank" rel="noopener noreferrer" class="contact-item">
-🌐 Facebook<span>Visiter mon profil ↗</span>
-</a>
-<div class="contact-item">📍 Localisation<span>Cotonou, Bénin</span></div>
-</div>
-
-<form id="contact-form">
-<h3>Envoyez-moi un message</h3>
-<input type="text" id="visitor-name" placeholder="Votre nom" required>
-<input type="email" id="visitor-email" placeholder="Votre adresse e-mail" required>
-<textarea id="visitor-message" placeholder="Votre message..." required></textarea>
-<button type="submit">Envoyer sur WhatsApp</button>
-<p class="form-note">Votre message sera préparé dans WhatsApp. Vous pourrez le vérifier avant de l'envoyer.</p>
-</form>
-</div>
-</section>
-
-<section id="soutien" class="section reveal">
-<p class="tag">UN GESTE POUR M’AIDER À GRANDIR</p>
-<h2 class="section-title">Me <span>soutenir</span></h2>
-
-<div class="glass support-box">
-<p class="support-intro">Si mon travail t’inspire ou si tu souhaites m’encourager dans mes projets, tu peux me soutenir avec l’un des moyens ci-dessous. Merci pour ta générosité !</p>
-
-<div class="support-methods">
-<div class="support-method">
-<strong>MTN Mobile Money</strong>
-<span>+229 01 42 75 77 62</span>
-<small>Numéro de réception</small>
-<button class="copy-number" type="button" data-number="+2290142757762">Copier le numéro</button>
-</div>
-
-<div class="support-method celtis">
-<strong>Celtis Cash</strong>
-<span>+229 01 29 74 93 46</span>
-<small>Numéro de réception</small>
-<button class="copy-number" type="button" data-number="+2290129749346">Copier le numéro</button>
-</div>
-
-<div class="support-method unavailable">
-<strong>Moov Money</strong>
-<span>Indisponible pour le moment</span>
-<small>Ce moyen de soutien sera ajouté prochainement.</small>
-</div>
-</div>
-
-<p class="support-note">Avant d’effectuer un transfert, vérifie bien le nom du bénéficiaire affiché par ton opérateur.</p>
-
-<form id="encouragement-form" class="encouragement-form">
-<h3>Laisser un mot d’encouragement</h3>
-<input type="text" id="encouragement-name" placeholder="Ton nom ou ton pseudonyme" maxlength="60" required>
-<textarea id="encouragement-message" placeholder="Écris ton message d’encouragement..." maxlength="500" required></textarea>
-<button type="submit">Envoyer mon encouragement sur WhatsApp</button>
-<p class="form-note">Ton message sera envoyé en privé sur WhatsApp. Il ne sera pas publié automatiquement sur le site.</p>
-</form>
-</div>
-</section>
+      <form id="encouragement-form" class="encouragement-form">
+        <h3>Laisser un mot d'encouragement</h3>
+        <input type="text" id="encouragement-name"
+          placeholder="Ton nom ou ton pseudonyme"
+          maxlength="60" required>
+        <textarea id="encouragement-message"
+          placeholder="Écris ton message d'encouragement..."
+          maxlength="500" required></textarea>
+        <button type="submit">
+          Envoyer mon encouragement sur WhatsApp
+        </button>
+        <p class="form-note">
+          Ton message sera envoyé en privé sur WhatsApp.
+          Il ne sera pas publié automatiquement sur le site.
+        </p>
+      </form>
+    </div>
+  </section>
 
 </main>
 
+<!-- PIED DE PAGE -->
 <footer>
-<div class="footer-brand" aria-label="DODJI">DODJI</div>
-<p>© 2026 FOLLY Dodji Achille. Tous droits réservés.</p>
-<p class="footer-text">Conçu avec passion et détermination.</p>
+  <div class="footer-brand" aria-label="DODJI">DODJI<span>.</span></div>
+  <p>© 2026 FOLLY Dodji Achille. Tous droits réservés.</p>
+  <p class="footer-text">Conçu avec passion et détermination.</p>
 </footer>
 
-<button class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</button>
+<button class="back-to-top" id="back-to-top"
+  aria-label="Retour en haut">↑</button>
 
+<!-- AGRANDISSEMENT DES PHOTOS -->
 <div id="lightbox" class="lightbox" aria-hidden="true">
-<button class="lightbox-close" aria-label="Fermer">&times;</button>
-<button class="lightbox-prev" aria-label="Photo précédente">❮</button>
-<img id="lightbox-image" src="" alt="Photo agrandie">
-<button class="lightbox-next" aria-label="Photo suivante">❯</button>
+  <button class="lightbox-close" aria-label="Fermer">&times;</button>
+  <button class="lightbox-prev" aria-label="Photo précédente">❮</button>
+  <img id="lightbox-image" src="" alt="Photo agrandie">
+  <button class="lightbox-next" aria-label="Photo suivante">❯</button>
 </div>
 
 <script>
-
-// Écran d'accueil
+/* ÉCRAN D'ACCUEIL */
 const welcomeScreen = document.getElementById("welcome-screen");
-document.getElementById("welcome-enter").addEventListener("click", () => {
- welcomeScreen.classList.add("welcome-hidden");
- document.body.classList.remove("welcome-active");
-});
-document.body.classList.add("welcome-active");
 
-// Thèmes
+document.getElementById("welcome-enter").addEventListener("click", () => {
+  welcomeScreen.classList.add("welcome-hidden");
+  document.body.classList.remove("welcome-active");
+});
+
+/* THÈMES */
 const themeSelect = document.getElementById("theme-select");
 
 function applyTheme(theme) {
- const chosen = theme === "auto"
-  ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
-  : theme;
+  const chosen = theme === "auto"
+    ? (window.matchMedia("(prefers-color-scheme: light)").matches
+      ? "light" : "dark")
+    : theme;
 
- document.documentElement.dataset.theme = chosen;
- themeSelect.value = theme;
+  document.documentElement.dataset.theme = chosen;
+  themeSelect.value = theme;
 
- try { localStorage.setItem("dodji-theme", theme); } catch(e) {}
+  try {
+    localStorage.setItem("dodji-theme", theme);
+  } catch (error) {}
 }
 
 let savedTheme = "auto";
-try { savedTheme = localStorage.getItem("dodji-theme") || "auto"; } catch(e) {}
+
+try {
+  savedTheme = localStorage.getItem("dodji-theme") || "auto";
+} catch (error) {}
 
 applyTheme(savedTheme);
-themeSelect.addEventListener("change", () => applyTheme(themeSelect.value));
 
-window.matchMedia("(prefers-color-scheme: light)").addEventListener?.("change", () => {
- if (themeSelect.value === "auto") applyTheme("auto");
+themeSelect.addEventListener("change", () => {
+  applyTheme(themeSelect.value);
 });
 
-// Traductions
-const translations = {
-fr: {
- "#welcome-philosophy": "« Apprendre, créer, progresser. »",
- "#welcome-caption": "Chaque idée est une occasion de bâtir quelque chose de grand.",
- "#welcome-enter": 'Entrer dans mon portfolio <span>→</span>',
- "#main-nav a:nth-child(1)": "Accueil",
- "#main-nav a:nth-child(2)": "À propos",
- "#main-nav a:nth-child(3)": "Compétences",
- "#main-nav a:nth-child(4)": "Projets",
- "#main-nav a:nth-child(5)": "Applications",
- "#main-nav a:nth-child(6)": "Galerie",
- "#main-nav a:nth-child(7)": "Contact",
- "#main-nav a:nth-child(8)": "Me soutenir",
- ".hero-content .tag": "BIENVENUE DANS MON UNIVERS NUMÉRIQUE",
- ".hero-content h2": "Créateur numérique · Passionné de technologie",
- ".hero-content .description": "Je transforme mes idées en expériences numériques. Je crée, j'apprends et j'innove pour donner vie à des projets qui ont du sens.",
- ".hero-content .btn": "Découvrir mes projets ↗",
- ".hero-content .btn-outline": "Me contacter",
- ".availability": '<span class="pulse"></span>Toujours prêt à apprendre et à créer',
- "#apropos > .tag": "QUI SUIS-JE ?",
- "#apropos .section-title": "À propos de <span>moi</span>",
- "#apropos .stat-card:nth-child(1) p": "Projets présentés",
- "#apropos .stat-card:nth-child(2) p": "Domaines de compétence",
- "#apropos .about p:nth-child(1)": "Je suis FOLLY Dodji Achille, passionné par le numérique, la technologie, le design et le développement informatique.",
- "#apropos .about p:nth-child(2)": "Je construis progressivement mes compétences à travers des projets concrets. Mon ambition est de devenir un expert reconnu et de créer des solutions digitales utiles.",
- "#apropos .about p:nth-child(3)": "Ma philosophie : apprendre, créer, progresser.",
- "#competences > .tag": "CE QUE JE FAIS",
- "#competences .section-title": "Mes <span>compétences</span>",
- "#projets > .tag": "MES RÉALISATIONS",
- "#projets .section-title": "Mes <span>projets</span>",
- "#applications > .tag": "MES CRÉATIONS NUMÉRIQUES",
- "#applications .section-title": "Mes <span>applications</span>",
- "#applications .section-intro": "Découvre et télécharge les applications que je développe. D'autres créations seront ajoutées progressivement.",
- "#applications .application-info h3": "Dodji Planning",
- "#applications .application-info p": "Organise tes études, planifie tes révisions et suis ta progression grâce à Dodji Planning.",
- "#applications .download-button": "⬇ Télécharger l'APK",
- "#galerie > .tag": "MON UNIVERS CRÉATIF",
- "#galerie .section-title": "Mes créations <span>visuelles</span>",
- "#contact > .tag": "ENTRONS EN CONTACT",
- "#contact .section-title": "Construisons quelque chose <span>ensemble.</span>",
- "#soutien > .tag": "UN GESTE POUR M’AIDER À GRANDIR",
- "#soutien .section-title": "Me <span>soutenir</span>",
- ".footer-text": "Conçu avec passion et détermination."
-},
+window.matchMedia("(prefers-color-scheme: light)")
+  .addEventListener?.("change", () => {
+    if (themeSelect.value === "auto") applyTheme("auto");
+  });
 
-en: {
- "#welcome-philosophy": "“Learn, create, grow.”",
- "#welcome-caption": "Every idea is an opportunity to build something meaningful.",
- "#welcome-enter": 'Enter my portfolio <span>→</span>',
- "#main-nav a:nth-child(1)": "Home",
- "#main-nav a:nth-child(2)": "About",
- "#main-nav a:nth-child(3)": "Skills",
- "#main-nav a:nth-child(4)": "Projects",
- "#main-nav a:nth-child(5)": "Applications",
- "#main-nav a:nth-child(6)": "Gallery",
- "#main-nav a:nth-child(7)": "Contact",
- "#main-nav a:nth-child(8)": "Support me",
- ".hero-content .tag": "WELCOME TO MY DIGITAL WORLD",
- ".hero-content h2": "Digital creator · Technology enthusiast",
- ".hero-content .description": "I turn ideas into digital experiences. I create, learn and innovate to bring meaningful projects to life.",
- ".hero-content .btn": "Explore my projects ↗",
- ".hero-content .btn-outline": "Contact me",
- ".availability": '<span class="pulse"></span>Always ready to learn and create',
- "#apropos > .tag": "WHO AM I?",
- "#apropos .section-title": "About <span>me</span>",
- "#apropos .stat-card:nth-child(1) p": "Projects presented",
- "#apropos .stat-card:nth-child(2) p": "Skill areas",
- "#apropos .about p:nth-child(1)": "I am FOLLY Dodji Achille, passionate about digital technology, design and software development.",
- "#apropos .about p:nth-child(2)": "I build my skills through hands-on projects. My ambition is to become a recognized expert and create useful digital solutions.",
- "#apropos .about p:nth-child(3)": "My philosophy: learn, create, grow.",
- "#competences > .tag": "WHAT I DO",
- "#competences .section-title": "My <span>skills</span>",
- "#projets > .tag": "MY WORK",
- "#projets .section-title": "My <span>projects</span>",
- "#applications > .tag": "MY DIGITAL CREATIONS",
- "#applications .section-title": "My <span>applications</span>",
- "#applications .section-intro": "Discover and download the applications I develop. More creations will be added progressively.",
- "#applications .application-info h3": "Dodji Planning",
- "#applications .application-info p": "Organize your studies, plan your revisions and track your progress with Dodji Planning.",
- "#applications .download-button": "⬇ Download APK",
- "#galerie > .tag": "MY CREATIVE WORLD",
- "#galerie .section-title": "My <span>visual creations</span>",
- "#contact > .tag": "GET IN TOUCH",
- "#contact .section-title": "Let's build something <span>together.</span>",
- "#soutien > .tag": "HELP ME GROW",
- "#soutien .section-title": "Support <span>me</span>",
- ".footer-text": "Made with passion and determination."
-}
+/* TRADUCTIONS */
+const translations = {
+  fr: {
+    "#welcome-philosophy": "« Apprendre, créer, progresser. »",
+    "#welcome-caption": "Chaque idée est une occasion de bâtir quelque chose de grand.",
+    "#welcome-enter": 'Entrer dans mon portfolio <span>→</span>',
+    "#main-nav a:nth-child(1)": "Accueil",
+    "#main-nav a:nth-child(2)": "À propos",
+    "#main-nav a:nth-child(3)": "Compétences",
+    "#main-nav a:nth-child(4)": "Projets",
+    "#main-nav a:nth-child(5)": "Applications",
+    "#main-nav a:nth-child(6)": "Galerie",
+    "#main-nav a:nth-child(7)": "Contact",
+    "#main-nav a:nth-child(8)": "Me soutenir",
+    ".hero-content .tag": "BIENVENUE DANS MON UNIVERS NUMÉRIQUE",
+    ".hero-content h2": "Créateur numérique · Passionné de technologie",
+    ".hero-content .description": "Je transforme mes idées en expériences numériques. Je crée, j'apprends et j'innove pour donner vie à des projets qui ont du sens.",
+    ".hero-content .btn": "Découvrir mes projets ↗",
+    ".hero-content .btn-outline": "Me contacter",
+    "#apropos > .tag": "QUI SUIS-JE ?",
+    "#apropos .section-title": "À propos de <span>moi</span>",
+    "#competences > .tag": "CE QUE JE FAIS",
+    "#competences .section-title": "Mes <span>compétences</span>",
+    "#projets > .tag": "MES RÉALISATIONS",
+    "#projets .section-title": "Mes <span>projets</span>",
+    "#applications > .tag": "MES OUTILS NUMÉRIQUES",
+    "#applications .section-title": "Mes <span>applications</span>",
+    "#galerie > .tag": "MON UNIVERS CRÉATIF",
+    "#galerie .section-title": "Mes créations <span>visuelles</span>",
+    "#contact > .tag": "ENTRONS EN CONTACT",
+    "#contact .section-title": "Construisons quelque chose <span>ensemble.</span>",
+    "#soutien > .tag": "UN GESTE POUR M'AIDER À GRANDIR",
+    "#soutien .section-title": "Me <span>soutenir</span>",
+    ".footer-text": "Conçu avec passion et détermination."
+  },
+
+  en: {
+    "#welcome-philosophy": "Learn, create, grow.",
+    "#welcome-caption": "Every idea is an opportunity to build something meaningful.",
+    "#welcome-enter": "Enter my portfolio <span>→</span>",
+    "#main-nav a:nth-child(1)": "Home",
+    "#main-nav a:nth-child(2)": "About",
+    "#main-nav a:nth-child(3)": "Skills",
+    "#main-nav a:nth-child(4)": "Projects",
+    "#main-nav a:nth-child(5)": "Applications",
+    "#main-nav a:nth-child(6)": "Gallery",
+    "#main-nav a:nth-child(7)": "Contact",
+    "#main-nav a:nth-child(8)": "Support me",
+    ".hero-content .tag": "WELCOME TO MY DIGITAL WORLD",
+    ".hero-content h2": "Digital creator · Technology enthusiast",
+    ".hero-content .description": "I turn ideas into digital experiences. I create, learn and innovate to bring meaningful projects to life.",
+    ".hero-content .btn": "Explore my projects ↗",
+    ".hero-content .btn-outline": "Contact me",
+    "#apropos > .tag": "WHO AM I?",
+    "#apropos .section-title": "About <span>me</span>",
+    "#competences > .tag": "WHAT I DO",
+    "#competences .section-title": "My <span>skills</span>",
+    "#projets > .tag": "MY WORK",
+    "#projets .section-title": "My <span>projects</span>",
+    "#applications > .tag": "MY DIGITAL TOOLS",
+    "#applications .section-title": "My <span>applications</span>",
+    "#galerie > .tag": "MY CREATIVE WORLD",
+    "#galerie .section-title": "My <span>visual creations</span>",
+    "#contact > .tag": "GET IN TOUCH",
+    "#contact .section-title": "Let's build something <span>together.</span>",
+    "#soutien > .tag": "HELP ME GROW",
+    "#soutien .section-title": "Support <span>me</span>",
+    ".footer-text": "Made with passion and determination."
+  }
 };
 
-// Traductions complémentaires
-Object.assign(translations.en, {
- ".hero-card p": "Digital creator<br>Technology enthusiast",
- ".hero-card small": "CREATE • INNOVATE • GROW",
- "#competences .skill:nth-child(1) h3": "Development",
- "#competences .skill:nth-child(1) p": "Learning Python, HTML, CSS and application development.",
- "#competences .skill:nth-child(2) h3": "Graphic design",
- "#competences .skill:nth-child(2) p": "Creating posters, flyers and greeting cards.",
- "#competences .skill:nth-child(3) h3": "Photography",
- "#competences .skill:nth-child(3) p": "Photo editing and professional shoots with Dodji Studio.",
- "#competences .skill:nth-child(4) h3": "Digital services",
- "#competences .skill:nth-child(4) p": "Installing apps, games and document services.",
- "#projets .project:nth-child(1) p": "A mobile app to help students organize their studies, activities and track their progress.",
- "#projets .project:nth-child(2) p": "An evolving intelligent assistant designed for voice and text communication.",
- "#projets .project:nth-child(3) p": "A space for sharing computer knowledge, tips and experiences.",
- "#projets .project:nth-child(4) p": "A creative world of photo editing and professional photo shoots.",
- "#projets .project:nth-child(5) p": "Digital and document services: CIP, NPI, IFU, secure certificates, typing and printing.",
- "#galerie .section-intro": "A few images from my creative world. Click a photo to enlarge it.",
- "#contact .contact-box > p": "Have an idea, a proposal or a project? I would be happy to hear from you.",
- "#contact-form h3": "Send me a message",
- "#visitor-name": "Your name",
- "#visitor-email": "Your email address",
- "#visitor-message": "Your message...",
- "#contact-form button": "Send via WhatsApp",
- "#soutien .support-intro": "If my work inspires you or you would like to encourage my projects, you can support me using one of the methods below. Thank you!",
- "#soutien .support-note": "Before making a transfer, check the beneficiary name displayed by your payment provider.",
- "#encouragement-form h3": "Leave a message of encouragement",
- "#encouragement-name": "Your name or nickname",
- "#encouragement-message": "Write your message of encouragement...",
- "#encouragement-form button": "Send encouragement via WhatsApp"
-});
-
 function applyLanguage(lang) {
- const dict = translations[lang] || translations.fr;
+  const dictionary = translations[lang] || translations.fr;
 
- Object.entries(dict).forEach(([selector, value]) => {
-  const element = document.querySelector(selector);
+  Object.entries(dictionary).forEach(([selector, value]) => {
+    const element = document.querySelector(selector);
 
-  if (element) {
-   if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
-    element.placeholder = value;
-   } else {
-    element.innerHTML = value;
-   }
-  }
- });
+    if (!element) return;
 
- document.documentElement.lang = lang;
- document.getElementById("language-select").value = lang;
+    if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+      element.placeholder = value;
+    } else {
+      element.innerHTML = value;
+    }
+  });
 
- try { localStorage.setItem("dodji-language", lang); } catch(e) {}
+  document.documentElement.lang = lang;
+  document.getElementById("language-select").value = lang;
+
+  try {
+    localStorage.setItem("dodji-language", lang);
+  } catch (error) {}
 }
 
 let savedLanguage = "fr";
-try { savedLanguage = localStorage.getItem("dodji-language") || "fr"; } catch(e) {}
+
+try {
+  savedLanguage = localStorage.getItem("dodji-language") || "fr";
+} catch (error) {}
 
 applyLanguage(savedLanguage);
 
-document.getElementById("language-select").addEventListener("change", event => {
- applyLanguage(event.target.value);
+document.getElementById("language-select")
+  .addEventListener("change", event => {
+    applyLanguage(event.target.value);
+  });
+
+/* ANIMATIONS AU DÉFILEMENT */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+  revealObserver.observe(element);
 });
 
-// Apparition progressive
-const revealObserver = new IntersectionObserver(entries => {
- entries.forEach(entry => {
-  if (entry.isIntersecting) {
-   entry.target.classList.add("visible");
-   revealObserver.unobserve(entry.target);
-  }
- });
-}, {threshold:0.12});
-
-document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
-
-// Menu mobile
+/* MENU MOBILE */
 const menuToggle = document.getElementById("menu-toggle");
 const mainNav = document.getElementById("main-nav");
 
 menuToggle.addEventListener("click", () => {
- const opened = mainNav.classList.toggle("nav-open");
- menuToggle.textContent = opened ? "✕" : "☰";
- menuToggle.setAttribute("aria-expanded", String(opened));
- menuToggle.setAttribute("aria-label", opened ? "Fermer le menu" : "Ouvrir le menu");
+  const opened = mainNav.classList.toggle("nav-open");
+
+  menuToggle.textContent = opened ? "✕" : "☰";
+  menuToggle.setAttribute("aria-expanded", String(opened));
+  menuToggle.setAttribute(
+    "aria-label",
+    opened ? "Fermer le menu" : "Ouvrir le menu"
+  );
 });
 
-mainNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
- mainNav.classList.remove("nav-open");
- menuToggle.textContent = "☰";
- menuToggle.setAttribute("aria-expanded", "false");
-}));
+mainNav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("nav-open");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
 
-// Barre de progression et retour en haut
+/* BARRE DE PROGRESSION ET RETOUR EN HAUT */
 const progressBar = document.getElementById("scroll-progress");
 const topButton = document.getElementById("back-to-top");
 
 function updateScroll() {
- const total = document.documentElement.scrollHeight - window.innerHeight;
- progressBar.style.width = (total > 0 ? window.scrollY / total * 100 : 0) + "%";
- topButton.classList.toggle("show", window.scrollY > 400);
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = total > 0 ? window.scrollY / total * 100 : 0;
+
+  progressBar.style.width = progress + "%";
+  topButton.classList.toggle("show", window.scrollY > 400);
 }
 
-window.addEventListener("scroll", updateScroll, {passive:true});
+window.addEventListener("scroll", updateScroll, { passive: true });
 updateScroll();
 
 topButton.addEventListener("click", () => {
- window.scrollTo({top:0, behavior:"smooth"});
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Compteurs animés
+/* COMPTEURS */
 const counters = document.querySelectorAll(".counter");
 
 const counterObserver = new IntersectionObserver(entries => {
- entries.forEach(entry => {
-  if (!entry.isIntersecting) return;
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
 
-  const el = entry.target;
-  const target = Number(el.dataset.target);
-  let value = 0;
-  const step = Math.max(1, Math.ceil(target / 50));
+    const element = entry.target;
+    const target = Number(element.dataset.target);
+    let value = 0;
 
-  const timer = setInterval(() => {
-   value = Math.min(value + step, target);
-   el.textContent = value;
+    const step = Math.max(1, Math.ceil(target / 50));
 
-   if (value >= target) clearInterval(timer);
-  }, 35);
+    const timer = setInterval(() => {
+      value = Math.min(value + step, target);
+      element.textContent = value;
 
-  counterObserver.unobserve(el);
- });
-}, {threshold:0.5});
+      if (value >= target) {
+        clearInterval(timer);
+      }
+    }, 35);
 
-counters.forEach(el => counterObserver.observe(el));
+    counterObserver.unobserve(element);
+  });
+}, { threshold: 0.5 });
 
-// Formulaire WhatsApp
-document.getElementById("contact-form").addEventListener("submit", event => {
- event.preventDefault();
+counters.forEach(element => counterObserver.observe(element));
 
- const name = document.getElementById("visitor-name").value.trim();
- const email = document.getElementById("visitor-email").value.trim();
- const message = document.getElementById("visitor-message").value.trim();
+/* FORMULAIRE DE CONTACT WHATSAPP */
+document.getElementById("contact-form")
+  .addEventListener("submit", event => {
+    event.preventDefault();
 
- if (!name || !email || !message) {
-  alert("Veuillez remplir tous les champs.");
-  return;
- }
+    const name = document.getElementById("visitor-name").value.trim();
+    const email = document.getElementById("visitor-email").value.trim();
+    const message = document.getElementById("visitor-message").value.trim();
 
- const body = `Bonjour Dodji !\n\nNom : ${name}\nE-mail : ${email}\n\nMessage :\n${message}`;
- const url = "https://wa.me/2290142757762?text=" + encodeURIComponent(body);
+    if (!name || !email || !message) {
+      alert("Veuillez remplir tous les champs.");
+      return;
+    }
 
- window.open(url, "_blank", "noopener");
-});
+    const body =
+      `Bonjour Dodji !\n\nNom : ${name}\nE-mail : ${email}\n\nMessage :\n${message}`;
 
-// Copie des numéros de soutien
+    const url =
+      "https://wa.me/2290142757762?text=" + encodeURIComponent(body);
+
+    window.open(url, "_blank", "noopener");
+  });
+
+/* COPIE DES NUMÉROS DE SOUTIEN */
 document.querySelectorAll(".copy-number").forEach(button => {
- button.addEventListener("click", async () => {
-  const number = button.dataset.number;
+  button.addEventListener("click", async () => {
+    const number = button.dataset.number;
 
-  try {
-   await navigator.clipboard.writeText(number);
-   button.textContent = "Numéro copié !";
-  } catch {
-   window.prompt("Copie ce numéro :", number);
-  }
+    try {
+      await navigator.clipboard.writeText(number);
+      button.textContent = "Numéro copié !";
+    } catch (error) {
+      window.prompt("Copie ce numéro :", number);
+    }
 
-  setTimeout(() => button.textContent = "Copier le numéro", 2200);
- });
+    setTimeout(() => {
+      button.textContent = "Copier le numéro";
+    }, 2200);
+  });
 });
 
-// Message d'encouragement
-document.getElementById("encouragement-form").addEventListener("submit", event => {
- event.preventDefault();
+/* MESSAGE D'ENCOURAGEMENT */
+document.getElementById("encouragement-form")
+  .addEventListener("submit", event => {
+    event.preventDefault();
 
- const name = document.getElementById("encouragement-name").value.trim();
- const message = document.getElementById("encouragement-message").value.trim();
+    const name =
+      document.getElementById("encouragement-name").value.trim();
 
- if (!name || !message) return;
+    const message =
+      document.getElementById("encouragement-message").value.trim();
 
- const text = `Bonjour Dodji !\n\nDe : ${name}\n\nMon encouragement :\n${message}`;
+    if (!name || !message) return;
 
- window.open("https://wa.me/2290142757762?text=" + encodeURIComponent(text), "_blank", "noopener");
-});
+    const text =
+      `Bonjour Dodji !\n\nDe : ${name}\n\nMon encouragement :\n${message}`;
 
-// Galerie et lightbox
+    window.open(
+      "https://wa.me/2290142757762?text=" + encodeURIComponent(text),
+      "_blank",
+      "noopener"
+    );
+  });
+
+/* GALERIE ET LIGHTBOX */
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
 const photos = Array.from(document.querySelectorAll(".gallery-photo"));
@@ -710,42 +756,49 @@ const photos = Array.from(document.querySelectorAll(".gallery-photo"));
 let currentPhoto = 0;
 
 function showPhoto(index) {
- if (!photos.length) return;
+  if (!photos.length) return;
 
- currentPhoto = (index + photos.length) % photos.length;
- lightboxImage.src = photos[currentPhoto].src;
- lightboxImage.alt = photos[currentPhoto].alt;
- lightbox.style.display = "flex";
- lightbox.setAttribute("aria-hidden", "false");
- document.body.classList.add("lightbox-open");
+  currentPhoto = (index + photos.length) % photos.length;
+
+  lightboxImage.src = photos[currentPhoto].src;
+  lightboxImage.alt = photos[currentPhoto].alt;
+
+  lightbox.style.display = "flex";
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.classList.add("lightbox-open");
 }
 
 function closeLightbox() {
- lightbox.style.display = "none";
- lightbox.setAttribute("aria-hidden", "true");
- document.body.classList.remove("lightbox-open");
+  lightbox.style.display = "none";
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("lightbox-open");
 }
 
 photos.forEach((photo, index) => {
- photo.addEventListener("click", () => showPhoto(index));
+  photo.addEventListener("click", () => showPhoto(index));
 });
 
-document.querySelector(".lightbox-next").addEventListener("click", () => showPhoto(currentPhoto + 1));
-document.querySelector(".lightbox-prev").addEventListener("click", () => showPhoto(currentPhoto - 1));
-document.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+document.querySelector(".lightbox-next")
+  .addEventListener("click", () => showPhoto(currentPhoto + 1));
+
+document.querySelector(".lightbox-prev")
+  .addEventListener("click", () => showPhoto(currentPhoto - 1));
+
+document.querySelector(".lightbox-close")
+  .addEventListener("click", closeLightbox);
 
 lightbox.addEventListener("click", event => {
- if (event.target === lightbox) closeLightbox();
+  if (event.target === lightbox) closeLightbox();
 });
 
 document.addEventListener("keydown", event => {
- if (lightbox.getAttribute("aria-hidden") === "true") return;
+  if (lightbox.getAttribute("aria-hidden") === "true") return;
 
- if (event.key === "Escape") closeLightbox();
- if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
- if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
+  if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
 });
-
 </script>
+
 </body>
 </html>
