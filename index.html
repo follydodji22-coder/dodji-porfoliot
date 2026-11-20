@@ -12,10 +12,11 @@
 </head>
 
 <body>
-
+<div class="scroll-progress" id="scroll-progress"></div>
 <header>
     <a href="#accueil" class="logo">DODJI<span>.</span></a>
-
+<button class="menu-toggle" id="menu-toggle"
+        aria-label="Ouvrir le menu">☰</button>
     <nav>
         <a href="#accueil">Accueil</a>
         <a href="#apropos">À propos</a>
@@ -186,34 +187,40 @@
     </div>
 </section>
 
+
 <section id="galerie" class="section reveal">
     <p class="tag">MON UNIVERS CRÉATIF</p>
     <h2 class="section-title">Mes créations <span>visuelles</span></h2>
-        
-<div class="gallery-card">
-    <img src="images/portrait.jpg"
-         alt="Portrait de Dodji"
-         class="gallery-photo">
-    <h3>Portrait professionnel</h3>
-    <p>FOLLY Dodji Achille</p>
-</div>
+    <p class="section-intro">
+        Quelques images de mon univers. Clique sur une photo pour l'agrandir.
+    </p>
 
+    <div class="gallery">
 
-        <div class="gallery-card reveal">
-    <img src="images/shooting-traditionnel.jpg"
-         alt="Shooting traditionnel réalisé par Dodji Studio"
-         class="gallery-photo">
-    <h3>Shooting traditionnel</h3>
-    <p>Photographie professionnelle • Dodji Studio</p>
-</div>
-
-        <div class="gallery-card">
-            <div class="gallery-placeholder">💡</div>
-            <h3>Créativité numérique</h3>
-            <p>Idées et réalisations digitales</p>
+        <div class="gallery-card glass">
+            <img src="images/portrait.jpg"
+                 alt="Portrait professionnel de Dodji"
+                 class="gallery-photo">
+            <h3>Portrait professionnel</h3>
+            <p>FOLLY Dodji Achille</p>
         </div>
-</section>
 
+        <div class="gallery-card glass">
+            <img src="images/shooting-traditionnel.jpg"
+                 alt="Shooting traditionnel Dodji Studio"
+                 class="gallery-photo">
+            <h3>Shooting traditionnel</h3>
+            <p>Photographie professionnelle • Dodji Studio</p>
+        </div>
+
+        <div class="gallery-card glass">
+            <div class="gallery-placeholder">✦</div>
+            <h3>Créativité numérique</h3>
+            <p>De nouvelles créations arrivent bientôt.</p>
+        </div>
+
+    </div>
+</section>
 
 <section id="contact" class="section reveal">
     <p class="tag">ENTRONS EN CONTACT</p>
@@ -362,5 +369,55 @@ document.addEventListener("keydown", event => {
     }
 });
 </script>
+
+/* MENU MOBILE */
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("header nav");
+
+menuToggle.addEventListener("click", () => {
+    const ouvert = nav.classList.toggle("nav-open");
+    menuToggle.textContent = ouvert ? "×" : "☰";
+});
+
+nav.querySelectorAll("a").forEach(lien => {
+    lien.addEventListener("click", () => {
+        nav.classList.remove("nav-open");
+        menuToggle.textContent = "☰";
+    });
+});
+
+/* BARRE DE PROGRESSION */
+const progressBar = document.getElementById("scroll-progress");
+const topButton = document.getElementById("back-to-top");
+
+function actualiserDefilement() {
+    const hauteur = document.documentElement.scrollHeight
+                  - window.innerHeight;
+
+    const progression = hauteur > 0
+        ? (window.scrollY / hauteur) * 100
+        : 0;
+
+    progressBar.style.width = progression + "%";
+
+    topButton.classList.toggle("show", window.scrollY > 400);
+}
+
+window.addEventListener("scroll", actualiserDefilement, {
+    passive: true
+});
+
+actualiserDefilement();
+
+/* RETOUR EN HAUT */
+topButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+    <button class="back-to-top" id="back-to-top"
+        aria-label="Retour en haut">↑</button>
 </body>
 </html>
