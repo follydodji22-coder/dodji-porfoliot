@@ -549,3 +549,145 @@ a.contact-item:hover {
     background: #00ff9c;
     color: #000;
 }
+
+/* ===== NOUVELLE EXPÉRIENCE DODJI PORTFOLIO ===== */
+
+.section-intro {
+    color: var(--muted);
+    margin: -12px 0 25px;
+    line-height: 1.7;
+}
+
+/* Galerie */
+.gallery-card {
+    overflow: hidden;
+}
+
+.gallery-photo {
+    cursor: zoom-in;
+    transition: transform .5s ease, filter .4s ease;
+}
+
+.gallery-card:hover .gallery-photo {
+    transform: scale(1.04);
+    filter: brightness(1.1);
+}
+
+/* Effet lumineux sur les cartes */
+.glass {
+    transition: border-color .35s ease,
+                box-shadow .35s ease,
+                transform .35s ease;
+}
+
+.skill:hover,
+.project:hover {
+    box-shadow: 0 15px 35px rgba(0,255,156,.15);
+    border-color: var(--green);
+}
+
+/* Lueur animée */
+.glow {
+    animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    from { transform: scale(.85); opacity: .07; }
+    to { transform: scale(1.15); opacity: .16; }
+}
+
+/* Barre de progression */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--green);
+    box-shadow: 0 0 12px var(--green);
+    z-index: 2000;
+}
+
+/* Bouton retour en haut */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #050807;
+    color: var(--green);
+    border: 1px solid var(--green);
+    font-size: 23px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: .3s;
+    z-index: 900;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--green);
+    color: #000;
+    box-shadow: 0 0 20px var(--green);
+}
+
+/* Menu mobile */
+.menu-toggle {
+    display: none;
+    color: var(--green);
+    background: transparent;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    width: 42px;
+    height: 40px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header nav.nav-open {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 12px;
+        border-top: 1px solid rgba(0,255,156,.12);
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Réduction des animations si nécessaire */
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
