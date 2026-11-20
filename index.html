@@ -12,18 +12,21 @@
 </head>
 
 <body>
+    <div id="scroll-progress"></div>
 <div class="scroll-progress" id="scroll-progress"></div>
 <header>
     <a href="#accueil" class="logo">DODJI<span>.</span></a>
-<button class="menu-toggle" id="menu-toggle"
-        aria-label="Ouvrir le menu">☰</button>
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+  ☰
+</button>
+
+<nav id="main-nav">
+  <a href="#accueil">Accueil</a>
+  <a href="#apropos">À propos</a>
+  <a href="#competences">Compétences</a>
+  <a href="#projets">Projets</a>
+  <a href="#contact">Contact</a>
+</nav>
 </header>
 
 <main>
@@ -74,7 +77,17 @@
 <section id="apropos" class="section reveal">
     <p class="tag">QUI SUIS-JE ?</p>
     <h2 class="section-title">À propos de <span>moi</span></h2>
+<div class="stats-container">
+  <div class="stat-card">
+    <h3><span class="counter" data-target="5">0</span>+</h3>
+    <p>Projets présentés</p>
+  </div>
 
+  <div class="stat-card">
+    <h3><span class="counter" data-target="4">0</span></h3>
+    <p>Domaines de compétence</p>
+  </div>
+</div>
     <div class="glass about">
         <p>
             Je suis FOLLY Dodji Achille, passionné par le numérique,
@@ -268,7 +281,20 @@
                 📍 Localisation
                 <span>Cotonou, Bénin</span>
             </div>
+<form id="contact-form">
+  <h3>Envoyez-moi un message</h3>
 
+  <input type="text" id="visitor-name"
+         placeholder="Votre nom" required>
+
+  <input type="email" id="visitor-email"
+         placeholder="Votre adresse e-mail" required>
+
+  <textarea id="visitor-message"
+            placeholder="Votre message..." required></textarea>
+
+  <button type="submit">Envoyer sur WhatsApp</button>
+</form>
         </div>
     </div>
 </section>
@@ -416,6 +442,100 @@ topButton.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+// MENU MOBILE
+const menuToggle = document.getElementById("menu-toggle");
+const mainNav = document.getElementById("main-nav");
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+    menuToggle.textContent =
+      mainNav.classList.contains("active") ? "✕" : "☰";
+  });
+
+  mainNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("active");
+      menuToggle.textContent = "☰";
+    });
+  });
+}
+
+// BARRE DE PROGRESSION
+window.addEventListener("scroll", () => {
+  const totalHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  const progress = totalHeight > 0
+    ? (window.scrollY / totalHeight) * 100
+    : 0;
+
+  document.getElementById("scroll-progress").style.width =
+    progress + "%";
+});
+
+// COMPTEURS ANIMÉS
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      const target = Number(counter.dataset.target);
+      let current = 0;
+
+      const increment = Math.max(1, Math.ceil(target / 50));
+
+      const timer = setInterval(() => {
+        current += increment;
+
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+
+        counter.textContent = current;
+      }, 35);
+
+      counterObserver.unobserve(counter);
+    }
+  });
+});
+
+counters.forEach(counter => counterObserver.observe(counter));
+
+// FORMULAIRE WHATSAPP
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const name = document.getElementById("visitor-name").value.trim();
+    const email = document.getElementById("visitor-email").value.trim();
+    const message = document.getElementById("visitor-message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Veuillez remplir tous les champs.");
+      return;
+    }
+
+    const text = `Bonjour Dodji !
+
+Nom : ${name}
+E-mail : ${email}
+
+Message :
+${message}`;
+
+    const whatsappURL =
+      "https://wa.me/2290142757762?text=" +
+      encodeURIComponent(text);
+
+    window.open(whatsappURL, "_blank");
+  });
+}
 
     <button class="back-to-top" id="back-to-top"
         aria-label="Retour en haut">↑</button>
