@@ -289,7 +289,12 @@ document.querySelectorAll(".reveal").forEach(element => {
 </script>
 <div id="lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
+
+    <button class="lightbox-prev" aria-label="Photo précédente">❮</button>
+
     <img id="lightbox-image" src="" alt="Photo agrandie">
+
+    <button class="lightbox-next" aria-label="Photo suivante">❯</button>
 </div>
   <script>
 const lightbox = document.getElementById("lightbox");
